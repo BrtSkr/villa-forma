@@ -108,8 +108,8 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    scroll-snap-align: start;
-
+    //scroll-snap-align: start;
+    padding: 0 0 2rem 0;
     &_main {
         background: url('../assets/img/header.webp') no-repeat;
         background-size: cover;
@@ -186,14 +186,14 @@ body {
 
             &___p {
                 position: absolute;
-                bottom: 0;
-                transform: translateX(50%);
+                bottom: 10%;
+                transform: translate(50%, 30%);
                 right: 50%;
                 color: white;
                 font-size: clamp(2rem, 4vw, 7rem);
                 width: 100%;
                 text-align: center;
-
+                  
                 >span {
                     font-size: clamp(1rem, 2vw, 4rem);
                     position: absolute;
@@ -266,7 +266,7 @@ body {
     }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 730px) and (max-width: 1024px) {
     .section{
         &_first,
             &_second,
@@ -274,6 +274,10 @@ body {
                 &__left {
                     width: 100%;
                     height: 50% !important;
+                }
+                &__right{
+                    width: 100%;
+                    height: 50%;
                 }
             }
     }
@@ -289,7 +293,6 @@ body {
                 height: 35rem;
                 overflow-y: scroll;
                 overflow-x: hidden;
-                z-index: 10000;
 
             }
         }
