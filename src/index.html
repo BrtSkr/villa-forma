@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Villa forma</title>
     <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css">
+    <script src="./js/main.js" type="module" defer></script>
+
 </head>
+
 <body>
     <main>
-        <nav></nav>
-        
+
         <header class="header header_main">
             <h1 class="h1 header_main__title">
                 <span>CZYSTA ARCHITEKTURA</span>
@@ -21,45 +25,92 @@
         <div class="section-wrapper">
             <section class="section section_first">
                 <div class="section_first__left">
-                <h2 class="h2 section_first__left___h2">
-                    <span>Przestrzeń,</span>
-                    <span>którą pokochasz</span>
-                </h2>
-                <p class="section_first__left___p">Villa forma to  enklawa 6 wolnostojących willi na Zielonym Wilanowie. Wyjątkowo duże działki od 1100 do 1650 m2, na których powstają domy o metrażach od 250 do 310 m2, od 4 do 7 pokoi.</p>
-                <p class="section_first__left___p">Projekt jest skupiony na funkcjonalności i designie. Villa Forma to połączenie ponadczasowej prostoty i najwyższej jakości materiałów.</p>
+                    <h2 class="h2 section_first__left___h2">
+                        <span>Przestrzeń,</span>
+                        <span>którą pokochasz</span>
+                    </h2>
+                    <p class="section_first__left___p">Villa forma to enklawa 6 wolnostojących willi na Zielonym
+                        Wilanowie. Wyjątkowo duże działki od 1100 do 1650 m2, na których powstają domy o metrażach od
+                        250 do 310 m2, od 4 do 7 pokoi.</p>
+                    <p class="section_first__left___p">Projekt jest skupiony na funkcjonalności i designie. Villa Forma
+                        to połączenie ponadczasowej prostoty i najwyższej jakości materiałów.</p>
                 </div>
                 <div class="section_first__right">
-                <img class="section_first__right___img" src="./assets/img/section/first_section.png" alt="house">
+                    <img class="section_first__right___img" src="./assets/img/section/first_section.png" alt="house">
                 </div>
             </section>
 
             <section class="section section_second">
                 <div class="section_first__left">
-                <h2 class="h2 section_first__left___h2">
-                    <span>Sztuka dobrego życia</span>
-                    
-                </h2>
-                <p class="section_first__left___p">Wille i ich otoczenie zostały zaprojektowane w taki sposób by mieszkańcy mogli osiągnąć równowagę dnia codziennego. Przestronne ogrody, wolnostojące domy w dużych odległościach. Tutaj chcesz oddychać pełną piersią. Czyste powietrze, trasy rowerowe, ścieżki do porannego joggingu oraz długich spacerów. Świat Villa Forma to szczęście, jakie daje otoczenie przyrody, przy jednoczesnej, niedalekiej odległości miasta i niezbędnej infrastruktry.</p>
+                    <h2 class="h2 section_first__left___h2">
+                        <span>Sztuka dobrego życia</span>
+
+                    </h2>
+                    <p class="section_first__left___p">Wille i ich otoczenie zostały zaprojektowane w taki sposób by
+                        mieszkańcy mogli osiągnąć równowagę dnia codziennego. Przestronne ogrody, wolnostojące domy w
+                        dużych odległościach. Tutaj chcesz oddychać pełną piersią. Czyste powietrze, trasy rowerowe,
+                        ścieżki do porannego joggingu oraz długich spacerów. Świat Villa Forma to szczęście, jakie daje
+                        otoczenie przyrody, przy jednoczesnej, niedalekiej odległości miasta i niezbędnej infrastruktry.
+                    </p>
                 </div>
                 <div class="section_first__right">
-                <img class="section_first__right___img" src="./assets/img/section/second_section.png" alt="villa">
+                    <img class="section_first__right___img" src="./assets/img/section/second_section.png" alt="villa">
                 </div>
             </section>
 
             <section class="section section_third">
                 <div class="section_first__left">
-                <h2 class="h2 section_first__left___h2">
-                    <span>Najwyższa jakość</span>
-                    <span>w każdym detalu</span>
-                </h2>
-                <p class="section_first__left___p">Skupiliśmy się na funkcjonalności i designie. Wykorzystaliśmy materiały tylko najwyższej jakości: cegłę, szkło, drewno, beton i aluminium. Abyś otrzymał to, co najlepsze: konsekwentny modernistyczny styl zachwycający w swej prostocie.</p>
+                    <h2 class="h2 section_first__left___h2">
+                        <span>Najwyższa jakość</span>
+                        <span>w każdym detalu</span>
+                    </h2>
+                    <p class="section_first__left___p">Skupiliśmy się na funkcjonalności i designie. Wykorzystaliśmy
+                        materiały tylko najwyższej jakości: cegłę, szkło, drewno, beton i aluminium. Abyś otrzymał to,
+                        co najlepsze: konsekwentny modernistyczny styl zachwycający w swej prostocie.</p>
                 </div>
                 <div class="section_first__right">
-                <img class="section_first__right___img" src="./assets/img/section/third_section.png" alt="house">
+                    <img class="section_first__right___img" src="./assets/img/section/third_section.png" alt="house">
                 </div>
             </section>
         </div>
+        <section class="section section_gallery">
+            <div id="my-gallery" class="section_gallery__container">
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_1.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_1.png" alt="">
+                    </a>
+                </figure>
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_2.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_2.png" alt="">
+                    </a>
+                </figure>
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_3.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_3.png" alt="">
+                    </a>
+                </figure>
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_4.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_4.png" alt="">
+                    </a>
+                </figure>
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_5.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_5.png" alt="">
+                    </a>
+                </figure>
+                <figure class="section_gallery__container___figure">
+                    <a href="./assets/img/gallery/gallery_6.png" data-pswp-width="800" data-pswp-height="400">
+                        <img class="section_gallery__container___img" src="./assets/img/gallery/gallery_6.png" alt="">
+                    </a>
+                </figure>
+            </div>
+        </section>
+
+
 
     </main>
 </body>
+
 </html>

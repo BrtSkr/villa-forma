@@ -5,15 +5,18 @@
 
 * {
     box-sizing: border-box;
+    
 }
 
 html {
     scroll-behavior: smooth;
+    //scroll-snap-type: y mandatory;
 }
 
 body {
     margin: 0;
     font-family: 'readex';
+    
 }
 
 .h1,
@@ -22,10 +25,12 @@ body {
     margin: 0;
 }
 
-.header {
+.header { 
+    position: relative;
     width: 100%;
-    height: 100vh;
-
+    min-height: 100vh;
+    scroll-snap-align: start;
+    
     &_main {
         background: url('../assets/img/header.png') no-repeat;
         display: flex;
@@ -37,9 +42,9 @@ body {
             flex-direction: column;
             text-align: right;
             //font-size: 5rem;
-            font-size: clamp(1.5rem,8vw,5.5rem);
+            font-size: clamp(1.5rem, 8vw, 5rem);
             color: white;
-            padding: 2rem;
+            padding: 0 3rem 3rem 0;
             letter-spacing: .15rem;
         }
     }
@@ -47,22 +52,32 @@ body {
 }
 
 .section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 100vh;
+    max-height: 100vh;
     width: 100%;
+  
+    //scroll-snap-align: start;
 
-    &_first, &_second, &_third {
+    &_first,
+    &_second,
+    &_third {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         background: #d8d8d8;
         color: #262626;
+
         &__left {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-basis: 50%;
-            padding: clamp(.8rem,2vw,3rem);
+            width: 50%;
+            padding: clamp(.8rem, 2vw, 3rem);
 
             &___h2 {
                 display: flex;
@@ -71,19 +86,21 @@ body {
                 //font-size: 3rem;
                 font-size: clamp(1.5rem, 3vw, 3rem);
             }
-            &___p{
-             
+
+            &___p {
+
                 //font-size: 1.3rem;
-                font-size: clamp(.8rem,1.5vw,1.3rem);
-                &:nth-child(2){
-                margin: 3rem 0 0 0;
+                font-size: clamp(.8rem, 1.5vw, 1.3rem);
+
+                &:nth-child(2) {
+                    margin: 3rem 0 0 0;
                 }
             }
         }
 
         &__right {
             overflow: hidden;
-            flex-basis: 50%;
+            width: 50%;
 
             &___img {
                 object-fit: cover;
@@ -92,16 +109,78 @@ body {
             }
         }
     }
-    &_second{
-    display: flex;
-    flex-direction: row-reverse;
-    background: #9c9894;
+
+    &_second {
+        display: flex;
+        flex-direction: row-reverse;
+        background: #9c9894;
     }
-    &_third{
+
+    &_third {
         background: #454444;
         color: #ffffff;
     }
-  
+
+    &_gallery {
+        position: relative;
+        min-height: 100vh;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // gap: 1rem;
+        // padding: 5rem 0;
+        &__container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            padding: 5rem 0;
+            &___img{
+            width: clamp(19rem, 30vw, 32rem);
+            //height: clamp(10rem, 20rem, 22rem);
+            height: auto;
+            cursor: pointer;
+            }
+        }
+        // &__img {
+        //     border-radius: .2rem;
+        //     //width: 32rem;
+        //     //height: 23rem;
+        //     //width: clamp(19rem, 30vw, 34rem);
+        //     //height: auto;
+            
+        //     // margin: auto;
+        //     // max-width: 95%;
+        //     // height: 20rem;
+        //     // border-radius: 5px;
+        //     // object-fit: cover;
+        //     // object-position: bottom;
+            
+        //     // &:nth-child(n + 4){
+        //     //     margin: -4rem auto 0 auto;
+        //     // }
+        // }
+    }
 }
 
 .nav {}
+
+@media screen and (max-width: 1024px) {
+    .section{
+    &_first, &_second, &_third{
+        &__left{
+        width: 100%;
+        height: 40%;
+        }
+        &__right{
+        width: 100%;
+        height: 60%;
+        }
+    }
+    &_gallery{
+        padding: 5rem 0;
+    }
+    }
+}
