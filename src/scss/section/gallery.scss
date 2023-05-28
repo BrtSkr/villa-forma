@@ -14,13 +14,12 @@
 
             &___img {
                 width: clamp(15rem, 30vw, 32rem);
-                //height: clamp(10rem, 20rem, 22rem);
                 height: auto;
                 cursor: pointer;
-                transition: .3s all;
+                transition: 0.3s all;
 
                 &:hover {
-                    opacity: .8;
+                    opacity: 0.8;
                     transform: scale(1.1);
                 }
             }
