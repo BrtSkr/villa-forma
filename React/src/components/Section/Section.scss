@@ -1,0 +1,166 @@
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    &_first,
+    &_second,
+    &_third {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background: #d8d8d8;
+        color: #262626;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 50%;
+            padding: clamp(1rem, 3vw, 4rem);
+
+            &___h2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: clamp(1.5rem, 3vw, 7rem);
+                transform: translateY(-3rem);
+            }
+
+            &___p {
+                font-size: clamp(.8rem, 1.5vw, 1.3rem);
+                transform: translateY(-3rem);
+
+                &____elevated {
+                    margin: 3rem 0 0 0;
+                }
+            }
+        }
+
+        &__right {
+            position: relative;
+            overflow: hidden;
+            width: 50%;
+
+            &___p {
+                position: absolute;
+                bottom: 10%;
+                transform: translate(50%, 30%);
+                right: 50%;
+                color: white;
+                font-size: clamp(2rem, 4vw, 7rem);
+                width: 100%;
+                text-align: center;
+
+                &_____span {
+                    font-size: clamp(1rem, 2vw, 4rem);
+                    position: absolute;
+
+                    &______moved {
+                        right: 51%;
+                    }
+                }
+
+                &::before {
+                    content: "OD";
+                    position: absolute;
+                    top: -55%;
+                    font-size: clamp(2rem, 3vw, 6rem);
+                }
+
+                &::after {
+                    content: "DO";
+                    position: absolute;
+                    top: -55%;
+                    right: 37.5%;
+                    font-size: clamp(2rem, 3vw, 6rem);
+                }
+            }
+
+            &___img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &_second {
+        display: flex;
+        flex-direction: row-reverse;
+        background: #9c9894;
+    }
+
+    &_third {
+        background: #454444;
+        color: #ffffff;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .section {
+
+        &_first,
+        &_second,
+        &_third {
+            &__left {
+                width: 100%;
+                height: 50%;
+                justify-content: flex-end;
+
+                &___h2 {
+                    margin: 5rem 0 0 0;
+                    transform: translateY(0rem);
+                }
+
+                &___p {
+                    transform: translateY(0rem);
+
+                    &____elevated {
+                        margin: 1rem 0 0 0;
+                    }
+                }
+            }
+
+            &__right {
+                width: 100%;
+                height: 50%;
+            }
+        }
+
+        &_second {
+            flex-direction: column-reverse;
+
+            .section_second__left {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 730px) and (max-width: 1024px) {
+    .section {
+
+        &_first,
+        &_second,
+        &_third {
+            &__left {
+                width: 100%;
+                height: 50%;
+            }
+
+            &__right {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    }
+}

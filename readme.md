@@ -1,6 +1,11 @@
+# Live preview
+* https://vformareact.netlify.app/ (React Version)
+* https://vforma.netlify.app/ (Vanilla version)
 # Setup
-## Live preview
-* https://vforma.netlify.app/
+### Choose your version (React or Vanilla with sass (project was built in two ways))
+* ``` cd ./AlmostVanilla ```
+or
+* ``` cd ./React ```
 ### Installing all dependencies
 * ``` npm i ```
 ### To run project:
@@ -8,6 +13,5 @@
 ### To create a build:
 * ``` npm run build ```
 ## Details
-* Bundler that was used: Parcel (You might encounter some issues (probably not), I should have used vite)
-* Techstack: VanillaJS, SASS
-* Used libraries: Swiper.js, photoswipe
+* Bundler that was used: in Vanilla - Parcel, React - Vite
+* Used libraries: Swiper.js (Only in vanilla), photoswipe (Both)
